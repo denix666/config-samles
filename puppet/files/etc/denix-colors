@@ -1,0 +1,93 @@
+# Denix colors
+##############
+#
+# Include this file in your script like this: <. /etc/denix-colors>
+#
+# Usage: <$color_Red; echo "This is the red color :-)"; $color_Off>
+#
+#
+# Copyright © 2001 - 2012 Denis Salmanovich denis.salmanovich@gmail.com
+#
+# This program is free software; you can redistribute it and/or modify
+# it under the terms of the GNU General Public License as published by
+# the Free Software Foundation; either version 2 of the License, or
+# (at your option) any later version.
+#
+# This program is distributed in the hope that it will be useful,
+# but WITHOUT ANY WARRANTY; without even the implied warranty of
+# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+# GNU General Public License for more details.
+#
+
+# Reset
+color_Off='echo -en \e[0m'             # Text Reset
+
+# Regular Colors
+color_Black='echo -en \e[0;30m'        # Black
+color_Red='echo -en \e[0;31m'          # Red
+color_Green='echo -en \e[0;32m'        # Green
+color_Yellow='echo -en \e[0;33m'       # Yellow
+color_Blue='echo -en \e[0;34m'         # Blue
+color_Purple='echo -en \e[0;35m'       # Purple
+color_Cyan='echo -en \e[0;36m'         # Cyan
+color_White='echo -en \e[0;37m'        # White
+
+# Bold
+color_BBlack='echo -en \e[1;30m'       # Black
+color_BRed='echo -en \e[1;31m'         # Red
+color_BGreen='echo -en \e[1;32m'       # Green
+color_BYellow='echo -en \e[1;33m'      # Yellow
+color_BBlue='echo -en \e[1;34m'        # Blue
+color_BPurple='echo -en \e[1;35m'      # Purple
+color_BCyan='echo -en \e[1;36m'        # Cyan
+color_BWhite='echo -en \e[1;37m'       # White
+
+# Underline
+color_UBlack='echo -en \e[4;30m'       # Black
+color_URed='echo -en \e[4;31m'         # Red
+color_UGreen='echo -en \e[4;32m'       # Green
+color_UYellow='echo -en \e[4;33m'      # Yellow
+color_UBlue='echo -en \e[4;34m'        # Blue
+color_UPurple='echo -en \e[4;35m'      # Purple
+color_UCyan='echo -en \e[4;36m'        # Cyan
+color_UWhite='echo -en \e[4;37m'       # White
+
+# Background
+color_On_Black='echo -en \e[40m'       # Black
+color_On_Red='echo -en \e[41m'         # Red
+color_On_Green='echo -en \e[42m'       # Green
+color_On_Yellow='echo -en \e[43m'      # Yellow
+color_On_Blue='echo -en \e[44m'        # Blue
+color_On_Purple='echo -en \e[45m'      # Purple
+color_On_Cyan='echo -en \e[46m'        # Cyan
+color_On_White='echo -en \e[47m'       # White
+
+# High Intensty
+color_IBlack='echo -en \e[0;90m'       # Black
+color_IRed='echo -en \e[0;91m'         # Red
+color_IGreen='echo -en \e[0;92m'       # Green
+color_IYellow='echo -en \e[0;93m'      # Yellow
+color_IBlue='echo -en \e[0;94m'        # Blue
+color_IPurple='echo -en \e[0;95m'      # Purple
+color_ICyan='echo -en \e[0;96m'        # Cyan
+color_IWhite='echo -en \e[0;97m'       # White
+
+# Bold High Intensty
+color_BIBlack='echo -en \e[1;90m'      # Black
+color_BIRed='echo -en \e[1;91m'        # Red
+color_BIGreen='echo -en \e[1;92m'      # Green
+color_BIYellow='echo -en \e[1;93m'     # Yellow
+color_BIBlue='echo -en \e[1;94m'       # Blue
+color_BIPurple='echo -en \e[1;95m'     # Purple
+color_BICyan='echo -en \e[1;96m'       # Cyan
+color_BIWhite='echo -en \e[1;97m'      # White
+
+# High Intensty backgrounds
+color_On_IBlack='echo -en \e[0;100m'   # Black
+color_On_IRed='echo -en \e[0;101m'     # Red
+color_On_IGreen='echo -en \e[0;102m'   # Green
+color_On_IYellow='echo -en \e[0;103m'  # Yellow
+color_On_IBlue='echo -en \e[0;104m'    # Blue
+color_On_IPurple='echo -en \e[10;95m'  # Purple
+color_On_ICyan='echo -en \e[0;106m'    # Cyan
+color_On_IWhite='echo -en \e[0;107m'   # White
