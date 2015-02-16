@@ -1,0 +1,10 @@
+### Вызов сборки из cmd
+# curl http://127.0.0.1:8080/jenkins/job/my1/build?delay=0sec
+
+### Добавление хука
+# [hooks]
+# hangegroup.hudson = curl http://hudson_url/job/project_name/build?delay=0sec
+
+### Time scheduler every 5 min
+# H/5 * * * *
+
