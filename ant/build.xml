@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="MyTestProject-1" default="compile">
+    <description>
+	Просто тестовый проект
+    </description>
+
+    <!-- set global properties for this build -->
+    <property name="mydir1" location="mydir"/>
+    <property name="mydir2" location="mydir2"/>
+
+    <!-- clean old files and dirs before new build -->
+    <target name="clean">
+	<echo>CLEAN target invoked</echo>
+	<delete dir="${mydir1}"/>
+	<delete dir="${mydir2}"/>
+    </target>
+    
+    <!-- compile new  build -->
+    <target name="compile" depends="clean">
+	<echo>COMPILE target invoked</echo>
+	<tstamp/>
+	<mkdir dir="${mydir1}"/>
+	<mkdir dir="${mydir2}"/>
+    </target>
+</project>
