@@ -1,0 +1,66 @@
+override_utf8_locale yes
+use_xft yes
+xftfont Sans:size=8
+xftalpha 0.8
+
+imlib_cache_size 0
+double_buffer yes
+update_interval 3.0
+background yes
+own_window yes
+own_window_class Conky
+own_window_transparent yes
+own_window_hints undecorated,below,skip_taskbar
+alignment top_right
+cpu_avg_samples 2
+default_color green
+draw_shades no
+draw_outline no
+draw_borders yes
+gap_x 10
+gap_y 250
+net_avg_samples 2
+uppercase no
+use_spacer none
+minimum_size 200 5
+
+TEXT
+${color green}Uptime:${alignr}${color orange} $uptime
+${color green}Date:${alignr}${color orange} ${time %e %B %G}
+${color green}Kernel version:${alignr}${color orange} ${kernel}
+${color green}IP Address (eth0):${alignr}${color orange} ${addr enp0s3}
+${color green}Public IP:${alignr}${color orange} ${execi 600 wget -qO- icanhazip.com}
+${color green}CPU Frequency (in GHz):${alignr}${color orange} $freq_g
+${color green}Load averages:${alignr}${color orange} $loadavg
+${color green}RAM Usage:${color orange} $mem/$memmax - $memperc% ${color}${membar 4}
+${color green}CPU Usage:${color orange} $cpu% ${color}${cpubar 4}
+${color green}${cpugraph cpu0 18,320 000000 7f8ed3}
+${color yellow}$hr
+##################################################################
+${color green}Disk usage (/):     ${color orange} ${fs_free /}/${fs_size /} ${color}${fs_bar 6 /}
+${color green}Disk usage (/home): ${color orange} ${fs_free /home}/${fs_size /home} ${color}${fs_bar 6 /home}
+${color yellow}$hr
+##################################################################
+${color green}Net Down:${color orange} ${downspeed enp0s3} k/s ${alignr}${color green}Net Up:${color orange} ${upspeed enp0s3} k/s
+${color green}${downspeedgraph enp0s3 18,155 104E8B 0077ff} $alignr${color green}${upspeedgraph enp0s3 18,155 104E8B 0077ff}
+${color green}TOTAL: ${color orange}${totaldown enp0s3} ${alignr}${color green}TOTAL: ${color orange}${totalup enp0s3}
+${color yellow}$hr
+##################################################################
+${color green}Port(s)${alignr}#Connections
+${color green}Inbound:${color orange} ${tcp_portmon 1 32767 count} ${color green}Outbound:${color orange} ${tcp_portmon 32768 61000 count}${alignr}${color green} ALL:${color orange} ${tcp_portmon 1 65535 count}
+${color yellow}$hr
+##################################################################
+${color green}CPU usage${alignr}PID    CPU%   MEM%
+${color orange} ${top name 1}${alignr}${top pid 1} ${top cpu 1} ${top mem 1}
+${color orange} ${top name 2}${alignr}${top pid 2} ${top cpu 2} ${top mem 2}
+${color orange} ${top name 3}${alignr}${top pid 3} ${top cpu 3} ${top mem 3}
+${color orange} ${top name 4}${alignr}${top pid 4} ${top cpu 4} ${top mem 4}
+${color orange} ${top name 5}${alignr}${top pid 5} ${top cpu 5} ${top mem 5}
+${color yellow}$hr
+##################################################################
+${color green}Mem usage${alignr}PID    CPU%   MEM%
+${color orange} ${top_mem name 1}${alignr}${top_mem pid 1} ${top_mem cpu 1} ${top_mem mem 1}
+${color orange} ${top_mem name 2}${alignr}${top_mem pid 2} ${top_mem cpu 2} ${top_mem mem 2}
+${color orange} ${top_mem name 3}${alignr}${top_mem pid 3} ${top_mem cpu 3} ${top_mem mem 3}
+${color orange} ${top_mem name 4}${alignr}${top_mem pid 4} ${top_mem cpu 4} ${top_mem mem 4}
+${color orange} ${top_mem name 5}${alignr}${top_mem pid 5} ${top_mem cpu 5} ${top_mem mem 5}
