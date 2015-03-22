@@ -37,8 +37,8 @@ ${color green}CPU Usage:${color orange} $cpu% ${color}${cpubar 4}
 ${color green}${cpugraph cpu0 18,320 000000 7f8ed3}
 ${color yellow}$hr
 ##################################################################
-${color green}Disk usage (/):     ${color orange} ${fs_free /}/${fs_size /} ${color}${fs_bar 6 /}
-${color green}Disk usage (/home): ${color orange} ${fs_free /home}/${fs_size /home} ${color}${fs_bar 6 /home}
+${color green}Disk usage (/):     ${color orange} ${fs_used /}/${fs_size /} ${color}${fs_bar 6 /}
+${color green}Disk usage (/home): ${color orange} ${fs_used /home}/${fs_size /home} ${color}${fs_bar 6 /home}
 ${color yellow}$hr
 ##################################################################
 ${color green}Net Down:${color orange} ${downspeed enp0s3} k/s ${alignr}${color green}Net Up:${color orange} ${upspeed enp0s3} k/s
