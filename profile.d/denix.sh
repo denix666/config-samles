@@ -10,11 +10,13 @@ fi
 
 export HISTCONTROL=ignoreboth
 
-# Enable history search bindings only for interactive shell
-if [[ $- == *i* ]]; then
-    bind '"\e[A": history-search-backward'
-    bind '"\e[B": history-search-forward'
+# If non interactive shell then end script
+if ! [[ $- == *i* ]]; then
+    return
 fi
+
+bind '"\e[A": history-search-backward'
+bind '"\e[B": history-search-forward'
 
 color_Off='\033[0m'             # Text Reset
 color_Black='\033[0;30m'        # Black
@@ -35,7 +37,7 @@ __        __   _                            _
 
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-$color_Purple*------$color_Yellow System Data $color_Purple ---------------------------------------
+$color_Purple+------$color_Yellow System Data $color_Purple ---------------------------------------
 $color_Purple|$color_White Hostname              $color_Purple = $color_Cyan `hostname`
 $color_Purple|$color_White IP address/mask       $color_Purple = $color_Cyan `ip addr | grep 'state UP' -A2 | tail -1 | awk '{print $2}'`
 $color_Purple|$color_White Kernel                $color_Purple = $color_Cyan `uname -r`
@@ -43,6 +45,6 @@ $color_Purple|$color_White Memory total          $color_Purple = $color_Cyan `ca
 $color_Purple|$color_White Memory free           $color_Purple = $color_Cyan `cat /proc/meminfo | grep MemFree | awk {'print $2'}` kB
 $color_Purple|$color_White System uptime         $color_Purple = $color_Cyan `uptime | awk -F',' '{print $1}' | awk -F'up ' '{print $2}'`
 $color_Purple|$color_White User                  $color_Purple = $user_color `whoami`
-$color_Purple*-----------------------------------------------------------
+$color_Purple+-----------------------------------------------------------
 $color_Off
 "
