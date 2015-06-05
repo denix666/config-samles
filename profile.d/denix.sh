@@ -41,8 +41,10 @@ $color_Purple+------$color_Yellow System Data $color_Purple --------------------
 $color_Purple|$color_White Hostname              $color_Purple = $color_Cyan `hostname`
 $color_Purple|$color_White IP address/mask       $color_Purple = $color_Cyan `ip addr | grep 'state UP' -A2 | tail -1 | awk '{print $2}'`
 $color_Purple|$color_White Kernel                $color_Purple = $color_Cyan `uname -r`
-$color_Purple|$color_White Memory total          $color_Purple = $color_Cyan `cat /proc/meminfo | grep MemTotal | awk {'print $2'}` kB
-$color_Purple|$color_White Memory free           $color_Purple = $color_Cyan `cat /proc/meminfo | grep MemFree | awk {'print $2'}` kB
+$color_Purple|$color_White System load           $color_Purple = $color_Cyan `uptime | awk -F'load average: ' '{print $2}'`
+$color_Purple|$color_White Memory total          $color_Purple = $color_Cyan `cat /proc/meminfo | grep MemTotal | awk '{printf \"%3.2f GB\n\", $2/1024/1024}'`
+$color_Purple|$color_White Memory free           $color_Purple = $color_Cyan `cat /proc/meminfo | grep MemFree | awk '{printf \"%3.2f GB\n\", $2/1024/1024}'`
+$color_Purple|$color_White Free space on /       $color_Purple = $color_Cyan `df | grep '/$' | awk '{printf \"%3.2f GB\n\", $(NF-2)/1024/1024}'`
 $color_Purple|$color_White System uptime         $color_Purple = $color_Cyan `uptime | awk -F',' '{print $1}' | awk -F'up ' '{print $2}'`
 $color_Purple|$color_White User                  $color_Purple = $user_color `whoami`
 $color_Purple+-----------------------------------------------------------
