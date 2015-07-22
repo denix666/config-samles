@@ -1,0 +1,15 @@
+
+
+# User specific environment and startup programs
+
+PATH=$PATH:$HOME/.local/bin:$HOME/bin
+export PATH
+
+JAVA_HOME=/home/user/tools/java
+export JAVA_HOME
+
+PATH=$JAVA_HOME/bin:/home/user/tools/ant/bin:$PATH
+export PATH
+
+JAVA_OPTS="-Dfile.encoding=UTF-8 -Xms1024M -XX:MaxPermSize=800M -Xmx2048M"
+export JAVA_OPTS
