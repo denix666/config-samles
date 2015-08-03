@@ -3,6 +3,16 @@
 PATH=$PATH:$HOME/.local/bin:$HOME/bin
 export PATH
 
+##################################
+# To enable java firefox plugin:
+#
+# Execute as root:
+#
+# alternatives --install /usr/lib64/mozilla/plugins/libjavaplugin.so libjavaplugin.so.x86_64 /home/user/tools/java/jre/lib/amd64/libnpjp2.so 20000
+#
+# restart browser
+##################################
+
 JAVA_HOME=/home/user/tools/java
 export JAVA_HOME
 
