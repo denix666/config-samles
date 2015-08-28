@@ -25,5 +25,5 @@ export ANT_HOME
 PATH=$JAVA_HOME/bin:$ANT_HOME/bin:$MAVEN_HOME/bin:$PATH
 export PATH
 
-JAVA_OPTS="-Dfile.encoding=UTF-8 -Xms1024M -XX:MaxPermSize=800M -Xmx2048M"
+JAVA_OPTS="-Dfile.encoding=UTF-8 -Xms768M -XX:MaxPermSize=768M -Xmx4096M -XX:+DisableExplicitGC"
 export JAVA_OPTS
